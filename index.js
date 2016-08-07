@@ -23,6 +23,8 @@ app.route('/pins')
 		return;
 	}
 
+	// TODO: Store pin in DB
+
 	res.json({ result: "OK" });
 })
 .get(function(req, res, next) {
@@ -35,6 +37,8 @@ app.route('/pins')
 		res.json({ error: "lat and lng are mandatory query params." });
 		return;
 	}
+
+	// TODO: Read pins from DB
 
 	var out = {
 		"pins": [
